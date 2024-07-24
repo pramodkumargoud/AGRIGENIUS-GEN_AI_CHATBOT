@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriGenius</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #4CAF50; }
+        #query { width: 100%; padding: 10px; margin-bottom: 10px; }
+        #submit { background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; }
+        #response { margin-top: 20px; border: 1px solid #ddd; padding: 10px; }
+    </style>
+</head>
+<body>
+    <h1>AgriGenius: Agriculture Q&A</h1>
+    <textarea id="query" rows="4" placeholder="Enter your agriculture-related question here..."></textarea>
+    <button id="submit">Ask AgriGenius</button>
+    <div id="response"></div>
+
+    <script>
+        $(document).ready(function() {
+            $('#submit').click(function() {
+                var query = $('#query').val();
+                $.ajax({
+                    url: '/',
+                    method: 'POST',
+                    data: { query: query },
+                    success: function(data) {
+                        $('#response').text(data.response);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
