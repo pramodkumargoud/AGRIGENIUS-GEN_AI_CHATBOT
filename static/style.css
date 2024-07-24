@@ -151,6 +151,7 @@ span.material-symbols-rounded {
   width: 100%;
   display: flex;
   padding: 20px 10px;
+  padding-bottom: 60px;
   justify-content: center;
   background: var(--outgoing-chat-bg);
   border-top: 1px solid var(--incoming-chat-border);
@@ -329,4 +330,17 @@ span.material-symbols-rounded {
 
 h1 {
   margin: 0;
+}
+
+
+/*  Footer */
+
+.footer {
+  text-align: center;
+  color: #4CAF50;
+  padding: 10px;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
