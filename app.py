@@ -43,16 +43,14 @@ def initialize_vector_store(contents):
     return db
 
 load_dotenv()
+together_api_key = os.getenv('API_KEY')
 
-# Access the API key from the environment variable
-api_key = os.getenv('OPENAI_API_KEY')
-# Initialize the language model
 llm = Together(
     model="meta-llama/Llama-2-70b-chat-hf",
     max_tokens=256,
     temperature=0.1,
     top_k=1,
-    together_api_key=api_key
+    together_api_key=together_api_key
 )
 
 # Set up the retrieval QA chain
@@ -60,7 +58,7 @@ def setup_retrieval_qa(db):
     retriever = db.as_retriever(similarity_score_threshold=0.6)
 
     # Define the prompt template
-    prompt_template = """ Your name is AgriGenius, Please answer questions related to Agriculture. Try explaining in simple words. Answer in less than 100 words. If you don't know the answer, simply respond with 'Don't know.'
+    prompt_template = """Please answer questions related to Agriculture. Try explaining in simple words. Answer in less than 100 words. If you don't know the answer, simply respond with 'Don't know.'
      CONTEXT: {context}
      QUESTION: {question}"""
 
