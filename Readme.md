@@ -6,7 +6,7 @@ AgriGenius is an intelligent chatbot designed to answer agriculture-related ques
 ## Features
 
 - Fetches content from websites and PDFs
-- Translates text using Google Translate
+- Multi-Language Support.
 - Answers agriculture-related questions
 - Beautiful and user-friendly interface
 - Stores conversation history
