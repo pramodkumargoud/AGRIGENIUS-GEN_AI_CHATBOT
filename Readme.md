@@ -24,8 +24,6 @@ AgriGenius is an intelligent chatbot designed to answer agriculture-related ques
 
 - Python 3.8 or higher
 - Flask
-- Together API key
-- Google Translate API key
 
 ## Installation
 
@@ -54,7 +52,7 @@ AgriGenius is an intelligent chatbot designed to answer agriculture-related ques
    Create a `.env` file in the root directory of the project and add your Together API key and Google Translate API key:
 
    ```
-   TOGETHER_API_KEY=your_together_api_key
+   API_KEY=your__api_key
    GOOGLE_TRANSLATE_API_KEY=your_google_translate_api_key
    ```
 
