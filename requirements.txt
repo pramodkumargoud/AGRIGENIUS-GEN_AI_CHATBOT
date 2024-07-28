@@ -1,0 +1,9 @@
+Flask
+requests
+PyPDF2
+langchain_community
+langchain_together
+langchain
+googletrans
+langdetect
+python-dotenv
