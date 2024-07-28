@@ -15,11 +15,12 @@ import os
 
 app = Flask(__name__)
 
+'''
 # Function to fetch content from a website
 def fetch_website_content(url):
     response = requests.get(url)
     return response.text
-
+'''
 # Function to extract text from a PDF file
 def extract_pdf_text(pdf_file):
     with open(pdf_file, "rb") as file:
@@ -106,11 +107,11 @@ def translate_from_english(result, target_lang):
 
 # Initialize the vector store and RetrievalQA chain
 urls = ["https://mospi.gov.in/4-agricultural-statistics"]
-pdf_files = ["Data/Farming Schemes.pdf", "Data/farmerbook.pdf"]
+pdf_files = ["Data/farmerbook.pdf"]               # ["Data/Farming Schemes.pdf", "Data/farmerbook.pdf"]
 
-website_contents = [fetch_website_content(url) for url in urls]
+#website_contents = [fetch_website_content(url) for url in urls]
 pdf_texts = [extract_pdf_text(pdf_file) for pdf_file in pdf_files]
-all_contents = website_contents + pdf_texts
+all_contents = pdf_texts   #  + website_contents
 
 db = initialize_vector_store(all_contents)
 chain = setup_retrieval_qa(db)
@@ -149,5 +150,4 @@ def index():
             return jsonify({'response': f'An error occurred: {str(e)}', 'status': 'error'})
     return render_template('index.html')
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
