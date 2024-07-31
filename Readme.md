@@ -122,7 +122,7 @@ agrigenius-chatbot/
    )
    ```
 
-## Project Demo
+## Project Demo Video
 
 For a detailed demonstration of the AgriGenius chatbot, you can watch the project video [here](https://drive.google.com/file/d/1S6G1OXv2e6Wbw6-UmE9NuHpT5MAvsPlR/view?usp=sharing).
 
