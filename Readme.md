@@ -132,9 +132,6 @@ For a detailed demonstration of the AgriGenius chatbot, you can watch the projec
 ![Project Image 2](images/Agri2.png)
 ![Project Image 3](images/Agri3.png)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
