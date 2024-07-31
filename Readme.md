@@ -104,7 +104,7 @@ agrigenius-chatbot/
 
    load_dotenv()
 
-   together_api_key = os.getenv('API_KEY')
+   together_api_key = os.getenv('TOGETHER_API_KEY')
    google_translate_api_key = os.getenv('GOOGLE_TRANSLATE_API_KEY')
    ```
 
@@ -125,6 +125,12 @@ agrigenius-chatbot/
 ## Project Demo
 
 For a detailed demonstration of the AgriGenius chatbot, you can watch the project video [here](https://drive.google.com/file/d/1S6G1OXv2e6Wbw6-UmE9NuHpT5MAvsPlR/view?usp=sharing).
+
+## Project Images
+
+![Project Image 1](images/Agri1.png)
+![Project Image 2](images/Agri2.png)
+![Project Image 3](images/Agri3.png)
 
 ## License
 
